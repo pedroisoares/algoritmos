@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Instrutor"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-01-29 04:32:10 "/>
+        <attribute name="created" value="SW5zdHJ1dG9yO0RFU0tUT1AtVUY2SjRORzsyMDI0LTAxLTI5OyIwNDoxNzowNCAiOzMyNDQ="/>
+        <attribute name="edited" value="SW5zdHJ1dG9yO0RFU0tUT1AtVUY2SjRORzsyMDI0LTAxLTI5OyIwNDozMjoxMCAiOzE7MzM0Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ano, mes, dia, idade" type="Integer" array="False" size=""/>
+            <declare name="nome" type="String" array="False" size=""/>
+            <input variable="nome"/>
+            <input variable="dia"/>
+            <input variable="mes"/>
+            <input variable="ano"/>
+            <assign variable="idade" expression="2024 - ano"/>
+            <output expression="nome" newline="True"/>
+            <output expression="idade" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

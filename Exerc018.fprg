@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Instrutor"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-14 05:10:58 "/>
+        <attribute name="created" value="SW5zdHJ1dG9yO0RFU0tUT1AtVUY2SjRORzsyMDI0LTAyLTE0OyIwNDo1MjozOCAiOzMyNDU="/>
+        <attribute name="edited" value="SW5zdHJ1dG9yO0RFU0tUT1AtVUY2SjRORzsyMDI0LTAyLTE0OyIwNToxMDo1OCAiOzE7MzM1MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="aNumeros" type="Integer" array="True" size="10"/>
+            <declare name="i, soma" type="Integer" array="False" size=""/>
+            <declare name="media" type="Real" array="False" size=""/>
+            <assign variable="soma" expression="0"/>
+            <assign variable="aNumeros[0]" expression="13"/>
+            <assign variable="aNumeros[1]" expression="20"/>
+            <assign variable="aNumeros[2]" expression="45"/>
+            <assign variable="aNumeros[3]" expression="60"/>
+            <assign variable="aNumeros[4]" expression="80"/>
+            <assign variable="aNumeros[5]" expression="91"/>
+            <assign variable="aNumeros[6]" expression="10"/>
+            <assign variable="aNumeros[7]" expression="12"/>
+            <assign variable="aNumeros[8]" expression="21"/>
+            <assign variable="aNumeros[9]" expression="48"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <assign variable="soma" expression="soma+aNumeros[i]"/>
+                <output expression="soma" newline="True"/>
+            </for>
+            <assign variable="media" expression="soma/10"/>
+        </body>
+    </function>
+</flowgorithm>

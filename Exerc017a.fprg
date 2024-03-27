@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Instrutor"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-14 04:44:04 "/>
+        <attribute name="created" value="SW5zdHJ1dG9yO0RFU0tUT1AtVUY2SjRORzsyMDI0LTAyLTE0OyIwMToyODozMiAiOzMyMzk="/>
+        <attribute name="edited" value="SW5zdHJ1dG9yO0RFU0tUT1AtVUY2SjRORzsyMDI0LTAyLTE0OyIwNDo0NDowNCAiOzU7MzM1MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="aNome" type="String" array="True" size="5"/>
+            <declare name="aSalario, aINSS, aBCIR, aIR, aVT, aVR, aSALLIQ" type="Real" array="True" size="5"/>
+            <declare name="aDiasTrab" type="Integer" array="True" size="5"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <input variable="aNome[i]"/>
+                <input variable="aSalario[i]"/>
+                <input variable="aDiasTrab[i]"/>
+                <assign variable="aSalario[i]" expression="arred((aSalario[i]/30)*aDiasTrab[i])"/>
+                <assign variable="aINSS[i]" expression="inss(aSalario[i])"/>
+                <assign variable="aBCIR[i]" expression="aSalario[i] - aINSS[i]"/>
+                <assign variable="aIR[i]" expression="ir(aBCIR[i])"/>
+                <assign variable="aVT[i]" expression="arred(aSalario[i] * 0.06)"/>
+                <assign variable="aVR[i]" expression="arred(aSalario[i] * 0.01)"/>
+                <assign variable="aSALLIQ[i]" expression="aSalario[i] - aINSS[i] - aIR[i]- aVT[i] - aVR[i]"/>
+            </for>
+            <output expression="&quot; ************* FOLHA DE PAGAMENTO  EMPRESA: XXXXXXXX  ***************&quot;" newline="True"/>
+            <output expression="&quot;NOME   SALARIO DIAS TRAB.   INSS     IR    VT     VR      SAL.LIQ.&quot;" newline="True"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;NOME = &quot;&amp;aNome[i]&amp;&quot;   &quot;" newline="False"/>
+                <output expression="&quot;SALARIO = &quot;&amp;aSalario[i]&amp;&quot;   &quot;" newline="False"/>
+                <output expression="&quot;INSS = &quot;&amp;aINSS[i]&amp;&quot;   &quot;" newline="False"/>
+                <output expression="&quot;IR = &quot;&amp;aIR[i]&amp;&quot;   &quot;" newline="False"/>
+                <output expression="&quot;VT = &quot;&amp;aVT[i]&amp;&quot;   &quot;" newline="False"/>
+                <output expression="&quot;VR = &quot;&amp;aVR[i]&amp;&quot;   &quot;" newline="False"/>
+                <output expression="&quot;SAL.LIQ. = &quot;&amp;aSALLIQ[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+    <function name="arred" type="Real" variable="valor">
+        <parameters>
+            <parameter name="valor" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <assign variable="valor" expression="int((int(valor*1000+1)/1000)*100)/100"/>
+        </body>
+    </function>
+    <function name="inss" type="Real" variable="inss">
+        <parameters>
+            <parameter name="salario" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="inss" type="Real" array="False" size=""/>
+            <if expression="salario &lt;= 1412">
+                <then>
+                    <assign variable="inss" expression="arred(salario * 0.075)"/>
+                </then>
+                <else>
+                    <if expression="salario &lt;= 2666.68">
+                        <then>
+                            <assign variable="inss" expression="arred(salario * 0.09)-21.18"/>
+                        </then>
+                        <else>
+                            <if expression="salario &lt;= 4000.03">
+                                <then>
+                                    <assign variable="inss" expression="arred(salario * 0.12)-101.18"/>
+                                </then>
+                                <else>
+                                    <if expression="salario &lt;= 7786.02">
+                                        <then>
+                                            <assign variable="inss" expression="arred(salario * 0.14)-181.18"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="inss" expression="908.86"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="ir" type="Real" variable="ir">
+        <parameters>
+            <parameter name="bcir" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="ir" type="Real" array="False" size=""/>
+            <if expression="bcir &lt;= 2112">
+                <then>
+                    <assign variable="ir" expression="0.00"/>
+                </then>
+                <else>
+                    <if expression="bcir &lt;= 2826.65">
+                        <then>
+                            <assign variable="ir" expression="arred(bcir * 0.075)-158.40"/>
+                        </then>
+                        <else>
+                            <if expression="bcir &lt;=  3751.05">
+                                <then>
+                                    <assign variable="ir" expression="arred(bcir * 0.15)-370.40"/>
+                                </then>
+                                <else>
+                                    <if expression="bcir &lt;= 4664.68">
+                                        <then>
+                                            <assign variable="ir" expression="arred(bcir * 0.225)-651.73"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="ir" expression="arred(bcir * 0.275)-884.96"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

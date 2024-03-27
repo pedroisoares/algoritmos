@@ -1,0 +1,317 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Instrutor"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-28 11:30:23 "/>
+        <attribute name="created" value="SW5zdHJ1dG9yO0RFU0tUT1AtVUY2SjRORzsyMDI0LTAyLTIxOyIwNzo1MzoxMiAiOzMyMzk="/>
+        <attribute name="edited" value="SW5zdHJ1dG9yO0RFU0tUT1AtVUY2SjRORzsyMDI0LTAyLTI4OyIxMTozMDoyMyAiOzMyOzMzOTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="opc, id, i" type="Integer" array="False" size=""/>
+            <declare name="res" type="Boolean" array="False" size=""/>
+            <declare name="aID" type="Integer" array="True" size="100"/>
+            <declare name="arq, reg" type="String" array="False" size=""/>
+            <assign variable="arq" expression="&quot;Produtos.txt&quot;"/>
+            <open expression="arq" mode="read"/>
+            <while expression="!EOF()">
+                <read variable="reg"/>
+                <output expression="reg" newline="True"/>
+            </while>
+            <close mode="read"/>
+            <for variable="i" start="0" end="99" direction="inc" step="1">
+                <assign variable="aID[i]" expression="-1"/>
+            </for>
+            <declare name="aDESCR" type="String" array="True" size="100"/>
+            <declare name="aQTDE, aPRECO" type="Real" array="True" size="100"/>
+            <assign variable="opc" expression="-1"/>
+            <output expression="&quot;#############   EMPRESA XYZ    ################&quot;" newline="True"/>
+            <while expression="opc!=0">
+                <output expression="&quot;1. Incluir Produto&quot;" newline="True"/>
+                <output expression="&quot;2. Alterar Produto&quot;" newline="True"/>
+                <output expression="&quot;3. Excluir Produto&quot;" newline="True"/>
+                <output expression="&quot;4. Listar Produtos&quot;" newline="True"/>
+                <output expression="&quot;5.Salvar&quot;" newline="True"/>
+                <output expression="&quot;0. Sair&quot;" newline="True"/>
+                <input variable="opc"/>
+                <if expression="opc&gt;=0 &amp;&amp; opc&lt;=5">
+                    <then>
+                        <if expression="opc==1">
+                            <then>
+                                <output expression="&quot;Opcao 1&quot;" newline="True"/>
+                                <assign variable="res" expression="incluir(aID,aDESCR,aQTDE,aPRECO)"/>
+                                <if expression="res">
+                                    <then>
+                                        <output expression="&quot;Produto Cadastrado&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;Produto N&#227;o Cadastrado&quot;" newline="True"/>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <if expression="opc==2">
+                                    <then>
+                                        <output expression="&quot;Opcao 2&quot;" newline="True"/>
+                                        <input variable="id"/>
+                                        <assign variable="res" expression="alterar(id,aID,aDESCR,aQTDE,aPRECO)"/>
+                                        <if expression="res">
+                                            <then>
+                                                <output expression="&quot;Produto Alterado&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;Produto N&#227;o Alterado&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </then>
+                                    <else>
+                                        <if expression="opc==3">
+                                            <then>
+                                                <output expression="&quot;Opcao 3&quot;" newline="True"/>
+                                                <input variable="id"/>
+                                                <assign variable="res" expression="excluir(id,aID,aDESCR,aQTDE,aPRECO)"/>
+                                                <if expression="res">
+                                                    <then>
+                                                        <output expression="&quot;Produto Excluido&quot;" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <output expression="&quot;Produto N&#227;o Excluido&quot;" newline="True"/>
+                                                    </else>
+                                                </if>
+                                            </then>
+                                            <else>
+                                                <if expression="opc==4">
+                                                    <then>
+                                                        <output expression="&quot;Opcao 4&quot;" newline="True"/>
+                                                        <assign variable="res" expression="listar(aID,aDESCR,aQTDE,aPRECO)"/>
+                                                        <if expression="res">
+                                                            <then/>
+                                                            <else>
+                                                                <output expression="&quot;Listagem N&#227;o Processada&quot;" newline="True"/>
+                                                            </else>
+                                                        </if>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="opc==5">
+                                                            <then>
+                                                                <output expression="&quot;Opcao 5&quot;" newline="True"/>
+                                                                <assign variable="arq" expression="&quot;Produtos.txt&quot;"/>
+                                                                <open expression="arq" mode="write"/>
+                                                                <assign variable="res" expression="salvar(arq,aID,aDESCR,aQTDE,aPRECO)"/>
+                                                                <if expression="res">
+                                                                    <then>
+                                                                        <output expression="&quot;Arquivo Salvo com Sucesso&quot;" newline="True"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <output expression="&quot;Arquivo n&#227;o Salvo&quot;" newline="True"/>
+                                                                    </else>
+                                                                </if>
+                                                                <close mode="write"/>
+                                                            </then>
+                                                            <else/>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <output expression="&quot;Selecione as opcoes entre 0 e 5&quot;" newline="True"/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+    <function name="alterar" type="Boolean" variable="res">
+        <parameters>
+            <parameter name="id" type="Integer" array="False"/>
+            <parameter name="aID" type="Integer" array="True"/>
+            <parameter name="aDESCR" type="String" array="True"/>
+            <parameter name="aQTDE" type="Real" array="True"/>
+            <parameter name="aPRECO" type="Real" array="True"/>
+        </parameters>
+        <body>
+            <declare name="res" type="Boolean" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="descricao" type="String" array="False" size=""/>
+            <declare name="qtde, preco" type="Real" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <while expression="aID[i]!=-1">
+                <if expression="aID[i]==id">
+                    <then>
+                        <output expression="aID[i]&amp;&quot; - &quot;&amp;aDESCR[i]&amp;&quot; - &quot;&amp;aQTDE[i]&amp;&quot; - &quot;&amp;aPRECO[i]" newline="True"/>
+                        <input variable="descricao"/>
+                        <input variable="qtde"/>
+                        <input variable="preco"/>
+                        <if expression="descricao!=&quot;&quot;">
+                            <then>
+                                <assign variable="aDESCR[i]" expression="descricao"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <if expression="qtde!= -1">
+                            <then>
+                                <assign variable="aQTDE[i]" expression="qtde"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <if expression="preco!= -1">
+                            <then>
+                                <assign variable="aPRECO[i]" expression="preco"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <assign variable="res" expression="true"/>
+        </body>
+    </function>
+    <function name="aSize" type="Integer" variable="size">
+        <parameters>
+            <parameter name="array" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="size, i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <assign variable="size" expression="0"/>
+            <while expression="array[i]!=-1">
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <assign variable="size" expression="i"/>
+        </body>
+    </function>
+    <function name="excluir" type="Boolean" variable="res">
+        <parameters>
+            <parameter name="id" type="Integer" array="False"/>
+            <parameter name="aID" type="Integer" array="True"/>
+            <parameter name="aDESCR" type="String" array="True"/>
+            <parameter name="aQTDE" type="Real" array="True"/>
+            <parameter name="aPRECO" type="Real" array="True"/>
+        </parameters>
+        <body>
+            <declare name="res" type="Boolean" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <while expression="aID[i]!=-1">
+                <if expression="aID[i]==id">
+                    <then>
+                        <if expression="aID[i+1]!=-1">
+                            <then>
+                                <assign variable="aID[i]" expression="aID[i+1]"/>
+                                <assign variable="aDESCR[i]" expression="aDESCR[i+1]"/>
+                                <assign variable="aQTDE[i]" expression="aQTDE[i+1]"/>
+                                <assign variable="aPRECO[i]" expression="aPRECO[i+1]"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <assign variable="aID[i-1]" expression="-1"/>
+            <assign variable="res" expression="true"/>
+        </body>
+    </function>
+    <function name="incluir" type="Boolean" variable="res">
+        <parameters>
+            <parameter name="aID" type="Integer" array="True"/>
+            <parameter name="aDESCR" type="String" array="True"/>
+            <parameter name="aQTDE" type="Real" array="True"/>
+            <parameter name="aPRECO" type="Real" array="True"/>
+        </parameters>
+        <body>
+            <declare name="res" type="Boolean" array="False" size=""/>
+            <declare name="id, i" type="Integer" array="False" size=""/>
+            <declare name="descricao" type="String" array="False" size=""/>
+            <declare name="qtde, preco" type="Real" array="False" size=""/>
+            <output expression="aSize(aID)" newline="True"/>
+            <assign variable="i" expression="aSize(aID)"/>
+            <if expression="i&gt;99">
+                <then>
+                    <assign variable="res" expression="false"/>
+                </then>
+                <else>
+                    <input variable="id"/>
+                    <input variable="descricao"/>
+                    <input variable="qtde"/>
+                    <input variable="preco"/>
+                    <assign variable="aID[i]" expression="id"/>
+                    <assign variable="aDESCR[i]" expression="descricao"/>
+                    <assign variable="aQTDE[i]" expression="qtde"/>
+                    <assign variable="aPRECO[i]" expression="preco"/>
+                    <assign variable="res" expression="true"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="listar" type="Boolean" variable="res">
+        <parameters>
+            <parameter name="aID" type="Integer" array="True"/>
+            <parameter name="aDESCR" type="String" array="True"/>
+            <parameter name="aQTDE" type="Real" array="True"/>
+            <parameter name="aPRECO" type="Real" array="True"/>
+        </parameters>
+        <body>
+            <declare name="res" type="Boolean" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <while expression="aID[i]!=-1">
+                <output expression="aID[i]&amp;&quot; - &quot;&amp;aDESCR[i]&amp;&quot; - &quot;&amp;aQTDE[i]&amp;&quot; - &quot;&amp;aPRECO[i]" newline="True"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <assign variable="res" expression="true"/>
+        </body>
+    </function>
+    <function name="qtdeDelim" type="Integer" variable="qtdeDelim">
+        <parameters>
+            <parameter name="inputString" type="String" array="False"/>
+            <parameter name="delim" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i, qtdeDelim" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <assign variable="qtdeDelim" expression="0"/>
+            <while expression="i&lt;len(inputString)">
+                <if expression="char(inputString,i)==delim">
+                    <then>
+                        <assign variable="qtdeDelim" expression="qtdeDelim+1"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="i" expression="i+1"/>
+            </while>
+        </body>
+    </function>
+    <function name="salvar" type="Boolean" variable="res">
+        <parameters>
+            <parameter name="arq" type="String" array="False"/>
+            <parameter name="aID" type="Integer" array="True"/>
+            <parameter name="aDESCR" type="String" array="True"/>
+            <parameter name="aQTDE" type="Real" array="True"/>
+            <parameter name="aPRECO" type="Real" array="True"/>
+        </parameters>
+        <body>
+            <declare name="res" type="Boolean" array="False" size=""/>
+            <declare name="reg" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <while expression="aID[i]!=-1">
+                <assign variable="reg" expression="aID[i]&amp;&quot;,&quot;&amp;aDESCR[i]&amp;&quot;,&quot;&amp;aQTDE[i]&amp;&quot;,&quot;&amp;aPRECO[i]"/>
+                <write expression="reg"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <assign variable="res" expression="true"/>
+        </body>
+    </function>
+</flowgorithm>

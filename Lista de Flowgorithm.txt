@@ -1,0 +1,522 @@
+Desafios em Flowgorithm   Nome dos arquivos: Desafio999 onde 999
+                                             numero da atividade
+
+1. Entrar com uma data no formato aaaammdd e mostrar em dd/mm/aaaa.
+   Ex.: 20240304 04/03/2024   
+
+2. Ler um número inteiro e mostrar seu antecessor e seu sucessor.
+   Ex.: 15   14 e 16
+
+3. Entrar com um ângulo em graus e imprimir: seno, co-seno, tangente.
+   Ex: 45    seno: 0.85   co-seno: 0.52    tangente: 1.6
+
+4. Entrar com um número no formato CDU e mostrar invertido no formato
+   UDC
+   Ex.: 123   321
+  
+5. Sabendo que 100 Kw/h custa 1/7 do Salário Mínimo fazer um algoritmo
+   que receba o valor do Salário Mínimo e a quantidade de Kw/h consumido
+   e mostre:
+   - O valor em R$ de cada Kw/h
+   - o valor em R$ a ser pago
+   - um novo valor a ser pago se for concedido um desconto de 10%
+
+6. Entrar com um nome e mostrar:
+  xyzw333   x y z w 3 3 3
+            0 1 2 3 4 5 6
+   "Pedro"  "ordeP"
+    01234    43210-1
+   - O nome completo
+   - O primeiro caracter
+   - O último caracter
+   - Do primeiro até o terceiro
+   - O quarto caracter
+   - Todos menos o primeiro
+   - Os 2 últimos
+
+7. Entrar com as medidas da base e a altura de um retângulo e mostrar:
+   - O perímetro
+   - A área
+   - A medida da diagonal
+
+8. Entrar com a medida do raio de um círculo e mostrar:
+   - O perímetro
+   - A área
+
+9. Entrar com a base, a altura e a profundidade de um paralelepipedo e
+   calcular a diagonal.
+
+10. Entrar com a base e a altura de um triângulo e calcule sua área.
+
+11. Entrer as medidas dos catetos de um triângulo retângulo e retornar a 
+    hipotenusa.
+
+12. Entrar com a razão de uma PA e o valor do primeiro termo. Calcular o 
+    valor do décimo termo.
+
+13. Entrar com a razão de uma PG e o valor do primeiro termo. Calcular o 
+    quinto termo da série.
+
+14. Ler uma temperatura em Centígrados e retornar em Fahrenheit. C=(5/9)*(F-32)
+    Ler uma temperatura em Fahrenheit e retornar de Centígrados. F=(9/5*C)+32
+
+15. Entrar a altura e o raio de uma lata de óleo e calcular o Volume.
+
+16. Calcular o custo com combustivel de um veiculo entrando o valor do combustivel,
+    distancia percorrida e quantos Km por litro.
+
+17. Ler dois valores para as variáveis A e B, efetuar a troca de valores da A com B.
+    Apresentar os valores trocados.
+
+18. Entrar o numerador e o denominador de 2 frações e efetuar sua soma e sua 
+    multiplicação.
+    Ex: 3/4 + 4/3 = 25/12    3/4 * 4/3 = 1
+
+19. Entrar com a Hora e o Minuto atual e mostrar quantos minutos se passaram desde
+    a meia-noite.
+
+20. Criar um algoritmo que leia um número entre 0 e 60 e imprima o seu sucessor, 
+    sabendo que o sucessor de 60 é 0. Não deve ser usado nem decisão e nem repetição.
+
+21. Ler 2 números reais e mostrar o quadrado da diferença e a diferença dos quadrados.
+
+22. Dado um poligono de n lados, calcule o numero de diagonais usando a formula
+    nd = n(n-3)/2
+
+23. Uma pessoa faz um aplicação mensal constante. Crie um algoritmo que leia o valor
+    da aplicação, o tempo da aplicação e a taxa de juros e calcule o valor acumulado
+    usando a formula  VA = (P*(1+i)^n - 1)/i  onde i=taxa; P=aplicação mensal
+                                                   n=numero de meses
+    P=100.00  i=1%  n=12m    VA=(100*(1+0.01)^12-1)/0.01  = 1.268.25
+
+24. Criar um algoritmo que, dado um numero calcule um digito verificador seguindo os
+   seguintes passos:
+   - Somar o número com o seu inverso: Ex. 235+532 = 767
+   - Multiplicar cada digito do resultado pela sua ordem posicional:
+           7    6    7
+          x1   x2   x3
+           7 + 12 + 21   = 40
+   - O último digito é o digito verificar. No caso do resultado 40 é o 0.
+
+25. Ler 3 numeros e informar se podem ser lados de um triângulo ou não.
+
+26. Ler 3 numeros e informar se formam um triângulo equilatero, isosceles, escaleno, ou
+    se não formam um triângulo.
+
+27. Ler 3 numeros e informar se formam um triângulo Retângulo, Acutangulo, Obtusangulo ou
+    não formam triângulo.
+
+28. Entrar com um verbo no infinitivo e mostrar o seguinte:
+    - Verbo não está no infinitivo, se não estiver no infinitivo
+    - Verbo da primeira conjugação (ar)
+    - Verbo da segunda conjugação (er,or)
+    - Verbo da terceira conjugação (ir)
+
+30. Ler um número inteiro entre 1 e 12 e escrever o mês correspondente. Caso o
+    usuário digite um número fora desse intervalo, deverá aparecer uma mensagem
+    informando que não existe mês com este número.
+
+31. Criar um algoritmo que leia uma data (dia, mês e ano em separado) e imprima se a
+    data é válida ou não.
+
+32. Entrar com o valor de x e imprimir y:
+         1, se x <=1
+y = f(x) 2, 5e 1 < x <= 2
+         x^2 ,se 2 < x <= 3
+         x^3 , se x > 3
+
+33. Criar um algoritmo que imprima a soma dos números pares entre 25 e 200.
+
+34. Criar um algoritmo que leia um número (num) e imprima a soma dos números
+    múltiplos dé 5 no intervalo aberto entre 1 e num. Suponha que num será maior
+    que zero.
+
+35. Criar um algoritmo que calcule o produto de 2 numeros atraves de somas 
+    sucessivas.
+
+36. Criar um algoritmo que imprima os 10 primeiros termos da série de Fibonacci.
+    Observação: os dois primeiros termos desta série são 1 e 1 e os demais são gerados
+    a partir da soma dos anteriores. Exemplos:
+    1 + 1 = 2 terceiro termo;
+    1 + 2 = 3 quarto termo etc.
+
+37. A série de RICCI difere da série de FIBONACCI porque os dois primeiros termos
+    são fornecidos pelo usuário. Os demais termos são gerados da mesma forma que
+    a série de FIBONACCI. Criar um algoritmo que imprima os n primeiros termos da
+    série de RICCI e a soma dos termos impressos, sabendo-se que para existir esta série
+    serão necessários pelo menos três termos.
+
+38. A série de FETUCCINE é gerada da seguinte forma: os dois primeiros termos são
+fornecidos pelo usuário; a partir dai., os termos são gerados com a soma ou subtração
+dos dois termos anteriores, ou seja:
+   Ai = Ai-1 + Ai-2 para / ímpar
+   Ai = Ai-1 - A1-2 para /par
+Criar um algoritmo que imprima os 10 primeiros termos da série de FETUCCINE.
+
+39. Entrar com 20 números e imprimir a soma dos números cujos quadrados são menores
+    do que 225.
+
+40. Entrar com um numero e imprimir todos os seus divisores.
+
+41. Entrar com dez números (positivos ou negativos) e imprimir o maior e o menor
+    número da lista.
+
+42. Entrar com uma mensagem e imprimir quantas letras A E / O e U tem esta mensagem
+    (considerar minúscula e maiúscula)
+
+43. Entrar com uma mensagem e criptogra fá-Ia da seguinte maneira:
+    A-X;E-Y;I-W;O-K;U-Z
+
+44. Criar um algoritmo que receba a idade e o peso de 20 pessoas. Calcular e imprimir
+    as médias dos pesos das pessoas da mesma faixa etária. As faixas etárias são: de 1
+    a 10 anos, de 11 a 20 anos, de 21 a 30 anos e maiores de 30 anos.
+
+45. Palíndromos são palavras (frases também) que são iguais quando lidas de frente
+    para trás e de trás para frente, ignorando os espaços.
+    AME O POEMA  AMOR A ROMA ATE O POETA LUZ AZUL
+    Criar um algoritmo que possa entrar com 15 mensagens e imprimir quantas são
+    palíndromos.
+
+46. Dado um país A, com 5.000.000 de habitantes e uma taxa de natalidade de 3% ao
+    ano, e um país B com 7.000.000 de habitantes e uma taxa de natalidade de 2%
+    ao ano calcular e imprimir o tempo necessario para que a população do pais A ultrapasse
+    a população do pais B
+
+47. Chico tem 1,50m e cresce 2 centímetros por ano, enquanto Juca tem 1, 1 O e
+    cresce 3 centímetros por ano. Construir um algoritmo que calcule e imprima
+    quantos anos serão necessários para que Juca seja maior que Chico.
+
+48. Uma empresa de fornecimento de energia elétrica faz a leitura mensal dos medidores
+    de consumo. Para cada consumidor, são digitados os seguintes dados:
+    - número do consumidor
+    - quantidade de kWh consumidos durante o mês
+    - tipo (código) do consumidor
+      1 - residencial, preço em reais por kWh = 0,3
+      2- comercial, preço em reais por kWh = 0,5
+      3 - industrial, preço em reais por kWh = 0,7
+    Os dados devem ser lidos até que seja encontrado um consumidor com número O
+    (zero). Calcular e imprimir:
+    - o custo total para cada consumidor
+    - o total de consumo para os três tipos de consumidor
+    - a média de consumo dos tipos 1 e 2
+
+49. Criar um algoritmo que leia vários números inteiros e apresente o fatorial de cada
+    número. O algoritmo se encerra quando se digita um número menor do que 1.
+
+50. Entrar com um número e verificar se ele é um número primo.
+
+51. Escrever um algoritmo que receba vários números inteiros e imprima a quantidade
+    de números primos dentre os números que foram digitados. O algoritmo acaba
+    quando se digita um número menor ou igual a O.
+
+52. Criar um algoritmo que calcule o M. M. C. entre dois números lidos.
+
+53. Criar um algoritmo que calcule o M. D. C. entre dois números inteiros lidos.
+
+54. Repare a seguinte característica do numero 3025 30 + 25 = 55 e 552 = 3025
+    Criar um algoritmo que possa ler vários números inteiros de 4 algarismos, um de
+    cada vez, e diga se o número apresenta a mesma característica (repare que 3025/
+    100=30 com resto 25). O algoritmo termina quando for lido um valor menor que
+    1.000 ou maior que 9999.
+
+55. Uma das maneiras de se conseguira raiz quadrada de um número é subtrair do nú -
+    mero os ímpares consecutivos a partir de 1, até que o resultado da subtração seja
+    menor ou igual a zero. O número de vezes que se conseguir fazer a subtração é a
+    raiz quadrada exata (resultado O) ou aproximada do número (resultado negativo).
+    Exemplo: Raiz de 16
+    16-1=15-3=12-5=7-7=0
+       |    |    |   |
+    A raiz de 16 é 4.
+
+56. Criar um algoritmo que leia um conjunto de informações (nome, sexo, idade,
+    peso e altura) dos atletas que participaram de uma olimpíada, e informar:
+    a) o atleta do sexo masculino mais alto;
+    b) a atleta do sexo feminino mais pesada;
+    c) a media de idade dos atletas
+    Deverão ser lidos dados dos atletas ate que seja digitado o nome @ para um atleta
+
+57. Criar um algoritmo que receba a idade, a altura e o peso de várias pessoas. Calcu -
+    le e imprima:
+    - a quantidade de pessoas com idade superior a 50 anos;
+    - a média das alturas das pessoas com idade entre 10 e 20 anos;
+    - a porcentagem de pessoas com peso inferior a 40 quilos entre todas as
+      pessoas analisadas.
+
+58. Criar um algoritmo que leia vários nomes completos e apresente somente o sobrenome
+    (última parte de nome). O algoritmo acaba quando se digita @ para o nome.
+    Exemplo: Entrada: Anita Luiza Maciel Lopes       Saída: Lopes
+             Entrada: Carlos Augusto Garcia de Assis Saída: Assis
+
+59. Criar um algoritmo que leia varios nomes completos e apresente quantos subno-
+    mes possui cada nome lido
+    Exemplo: Entrada: Anita Luiza Maciel Lopes       Saída: 4
+             Entrada: Carlos Augusto Garcia de Assis Saída: 5
+
+60. Uma empresa classifica seus funcionários em três níveis de acordo com um índice
+    de produtividade. São eles: (1) Excelente, (2) Bom e (3) Regular. Cada nível acres -
+    centa um abono ao salário base do funcionário, de acordo com a seguinte tabela:
+    Excelente 80% do salário base
+    Bom 50% do salário base
+    Regular 30% do salário base
+    O algoritmo deve ler a matrícula do funcionário, seu salário base, seu nível de
+    abono e imprimir o salário a ser pago. O algoritmo deve fornecer também a matrícula
+    do funcionário de maior abono e a média do abono para os funcionários
+    classificados como "Regular".
+    O algoritmo termina ao ler um valor de matrícula negativo.
+
+61. Pesquise como é feito o calculo do digito verificador do CPF e implemente o algo-
+    ritmo para realizar o calculo.
+
+62. Pesquise como é feito o calculo do digito verificador do CNPJ e implemente o algo-
+    ritmo para realizar o calculo.
+
+63. Em uma eleição presidencial, existem quatro candidatos. Os votos são informados
+    através de código. Os dados utilizados para a escrutina gem obedecem à seguinte
+    codificação:
+    - 1, 2, 3, 4 = voto para os respectivos candidatos;
+    - 5 = voto nulo;
+    - 6 = voto em branco;
+    Elaborar um algoritmo que calcule e imprima:
+    - total de votos para cada candidato:
+    - total de votos nulos;
+    - total de votos em branco,
+    - percentual dos votos em branco e nulos sobre o total
+
+64. Um marciano chegou a uma floresta e se escondeu atrás de uma das 100 árvores
+    quando viu um caçador. O caçador só tinha cinco balas em sua espingarda. Cada
+    vez que ele atirava, e não acertava, é claro, o marciano dizia: estou mais à direita
+    ou mais à esquerda. Se o caçador não conseguir acertar o marciano, ele será levado
+    para Marte. Implementar este jogo para dois jogadores, onde um escolhe a árvore
+    em que o marciano irá se esconder, e o outro tenta acertar.
+
+65. Criar um algoritmo que armazene 5 nomes em um vetor. Ordenar e imprimir uma
+    listagem.
+
+66. Criar um algoritmo que armazene cinco nomes em um vetor e depois possa ser di -
+    gitado um nome e, se for encontrado, imprimir a posição desse nome no vetor;
+    caso contrário, imprimir uma mensagem.
+
+67. Armazenar 15 números inteiros em um vetor NUM e imprimir uma listagem nu -
+    merada contendo o número e uma das mensagens: par ou ímpar.
+
+68. Criar um algoritmo que imprima o horóscopo de várias pessoas, a partir de sua
+    data de nascimento (ddmm). O fim é determinado quando se digita 9999 para
+    data; considere que a data foi digitada corretamente.
+    Mês Último dia Signo
+    01  20         Capricórnio
+    02  19         Aquário
+    03  20         Peixes
+    04  20         Áries
+    05  20         Touro
+    06  20         Gêmeos
+    07  21         Câncer
+    08  22         Leão
+    09  22         Virgem
+    10  22         Libra
+    11  21         Escorpião
+    12  21         Sagitário
+
+69. Criar um algoritmo que realize as reservas de passagem aéreas de uma companhia.
+    Além da leitura do número de vôos e da quantidade de lugares disponíveis,
+    leia vários pedidos de reserva, constituídos do número da carteira de identidade
+    do cliente e do número do vôo desejado.
+    Para cada cliente, verificar se há possibilidade no vôo desejado. Em caso afirmativo,
+    imprimir o número da identidade do cliente e o número do vôo, atualizando o número
+    de lugares disponíveis. Caso contrário, avisar ao cliente a inexistência de lugares.
+
+70. Criar um algoritmo que leia os elementos de um vetor com 20 posições e escreva-
+    o. Em seguida, troque o primeiro elemento pelo último, o segundo pelo penúltimo,
+    o terceiro pelo antepenúltimo, e assim sucessivamente. Mostre o vetor depois
+    das trocas
+
+71. Em um concurso público inscreveram-se 5.000 candidatos para 100 vagas. Cada
+    candidato fez 3 provas, tendo cada uma pesos 2, 3 e 5 respectivamente, na ordem
+    em que foram feitas. Fazer um algoritmo que leia nome, matrícula e os pontos
+    obtidos pelos candidatos em cada prova; apresentar a classificação, a matrícula
+    e o nome dos candidatos aprovados, ordenados pela classificação.
+
+72. Suponha três vetores de 30 elementos cada, contendo: nome, endereço, telefone.
+    Fazer um trecho que se possa buscar pelo nome e imprimir todos os dados.
+
+73. Ler nome, CPF e profissão de 100 pessoas. Imprimir qual(ais) a(s) profissão(ões)
+    que mais se repete(m) e quantas pessoas têm essa(s) profissão(ões).
+
+74. Um hotel fazenda gostaria de fazer um algoritmo que pudesse controlar os se
+    guintes dados dos 50 quartos
+    - número de leitos por quarto;
+    - preço
+    - situação: alugado, livre ou reservado;
+    - aluguel do quarto com data de entrada e de saída e numero de diárias;
+    - despesas dentro do hotel;
+    - valor a ser pago;
+    - impressão de todos os quartos com a situação de cada um;
+    - impressão dos quartos livres.
+   Criar um algoritmo que funcione de acordo com o menu a seguir
+
+	Hotel-Fazenda Sucesso
+	1. Cadastra quartos
+	2. Lista todos os quartos
+	3. Lista quartos ocupados
+	4. Aluguel/reserva quarto
+	5. Entra despesas extras
+	6. Calcula despesa do quarto
+	7. Sai
+
+75. Criar um algoritmo que funcione de acordo com o menu a seguir, sabendo-se que
+    poderão ser cadastradas até 50 pessoas.
+
+    **** *** * * ****** **** *
+    * MENU *
+    * **** * * ****** * **** * *
+    1 - cadastra dados do cliente
+    2 - cadastra milha gem do cliente
+    3 - lista milha gem do cliente
+    4 - imprime os nomes que têm maior e menor milha gem
+    5- imprime os nomes e as milha gens
+    6- SAIR
+    OPCAO:
+
+76. Criar uma função que converta graus para radianos.
+
+77. Criar uma função que converta radianos para graus
+
+78. Criar um algoritmo que calcule o fatorial de um número, usando uma função que
+    receba um valor e retorne o fatorial desse valor.
+
+79. Criar uma função que verifique se um número é primo.
+
+80. Criar uma função que verifique quantas vezes um número é divisível poroutro.
+
+81. Um número é dito regular se sua decomposição em fatores primos apresenta
+    apenas potências de 2, 3 e 5. Faça uma função que verifique se um número é ou
+    não regular.
+
+82. Criar uma função que receba um caractere como parâmetro e retorne 1, caso seja
+    uma consoante e O em caso contrário.
+
+83. Criar uma função que calcule o número de combinações de n elementos p a p. A
+    fórmula da combinação é a seguinte:
+    C = n! / (p! * (n-p)!)
+
+84. Um número é capicua quando lido da esquerda para a direita ou da direita para a
+    esquerda. O ano 2002 é um ano capicua. Elabore uma função que verifique essa
+    característica.
+
+85. Elaborar uma função que converta um número da base 10 para qualquer base entre
+    2 e 10, inclusive.
+
+    Exemplo na base 2: 12                23 | 2            Pega-se os resultados
+    Observe a figura ao lado              1  11 | 2        do último para o primeiro
+    que converte 23 (base 10) o               1   5 | 2
+    para 10111 (base 2).                          1   2 | 2
+                                                      0   
+                                                          1
+
+86. Criar uma função que receba como parâmetros dois vetores inteiros, e um inteiro
+    indicando a quantidade de elementos que os dois vetores têm. A função deverá
+    retornar o produto interno dos dois vetores.
+    Vet1      1   2   3   4
+    Vet2      4   3   2   1 
+    Vet1*Vet2 4 + 6 + 6 + 4 = 20
+
+87. Criar uma função que receba o vetor e um elemento e verifique se o elemento
+    está no vetor. O vetor está desordenado e tem dez elementos.    
+
+88. Criar uma função chamada inverte que receba um vetor de números inteiros como
+    parâmetro e seu tamanho. A função deve invertera ordem dos elementos do vetor
+    de modo que o 12 vire o último e o 22 vire o penúltimo e assim sucessivamente.
+
+89. Criar uma função que receba uma mensagem, seu tamanho e um caractere e retire
+    todas as ocorrências desse caractere na mensagem colocando * em seu lugar.
+    A função deve retornar o total de caracteres retirados.
+
+    Ex.:
+	digite mensagem:PRECISO FAZER OS 100 ALGORITMOS E COMECAR A CRIAR OS MEUS.
+	digite letra: A
+	total de trocas: 5
+	PRECISO F*ZER OS 100 *LGORITMOS E COMEC*R * CRI*R OS MEUS.
+
+90. Criar uma função que receba uma mensagem seu tamanho e dois caracteres -e
+    substitua todas as ocorrências do 1 2 caractere pelo 22 caractere   
+
+    Ex:
+	digite mensagem:
+	SE NAO APRENDI TODOS OS EXERCICIOS DE UM CAPITULO, NAO DEVO PASSAR
+	PARA .O OUTRO
+	digite 1 letra E
+	digite 2 letra K
+	total de trocas 6
+	5K NAO APRKNDI TODOS OS KXKRCICIOS DK UM CAPITULO, NAO DKVO PASSAR
+	PARA O OUTRO  
+
+91. Criar uma função que receba um vetor de caracteres, seu tamanho e um caractere
+    e retire todas as ocorrências desse caractere no vetor, colocando * em seu lugar.
+    A função deve retornar o total de caracteres retirados do vetor
+
+    Ex.:
+	digite palavra em letras minusculas 1: escola
+	digite palavra em letras minusculas 2: sacada
+	digite palavra em letras minusculas 3: algoritmos
+	digite palavra em letras minusculas 4: festa
+	digite palavra em letras minusculas 5: escada
+	digite palavra em letras minusculas 6: cantar
+	digite palavra em letras minusculas 7: tocar
+	digite palavra em letras minusculas 8: estudar
+	digite palavra em letras minusculas 9: pancada
+	digite palavra em letras minusculas 10: cansei
+	digite uma letra: c
+	1 - es*ola
+	2 - sa*ada
+	3 - algoritmos
+	4 - festa
+	5 - es*ada
+	6 - *antar
+	7 - to*ar
+	8 - estudar
+	9 - pan*ada
+	10 - *ansei
+
+92. Criar uma função que receba um vetor e verifique se ele está ordenado, de forma
+    crescente ou decrescente, ou se não está ordenado.
+
+    Ex.:
+    Digite numero 1: 1 	 Digite numero 1: 98 	Digite numero 1: 9
+    Digite numero 2: 2 	 Digite numero 2: 76 	Digite numero 2: 8
+    Digite numero 3: 3 	 Digite numero 3: 54 	Digite numero 3: 7
+    Digite numero 4: 4 	 Digite numero 4: 32 	Digite numero 4: 6
+    Digite numero 5: 5 	 Digite numero 5: 21 	Digite numero 5: 5
+    Digite numero 6: 6 	 Digite numero 6: 19 	Digite numero 6: 4
+    Digite numero 7: 7 	 Digite numero 7: 18 	Digite numero 7: 3
+    Digite numero 8: 8 	 Digite numero 8: 15 	Digite numero 8: 2
+    Digite numero 9: 9 	 Digite numero 9: 9 	Digite numero 9: 1
+    Digite numero 10: 10 Digite numero 10: 3 	Digite numero 10: 67
+    ORDENACAO CRESCENTE  ORDENACAO DECRESCENTE 	NAO ESTA ORDENADO
+
+93. Criar uma função que receba um vetor de caracteres e ordenar
+
+94. Criar uma função que receba um vetor e um elemento e verifique se o elemento
+    está no vetor. O vetor deve estar ordenado crescentemente.
+
+95. Criar uma função que implemente uma busca binária. Esta função recebe um vetor
+    de inteiros, seu tamanho e uma chave e retorna a posição da chave no vetor.
+    Lembre-se de que o vetor deverá estar ordenado.
+
+96. Criar um algoritmo que funcione de acordo com o menu a seguir, sabendo-se que
+    os vetores têm dimensão 5. Os itens 1, 2, 3 e 4 são funções:
+    
+    Ex.:
+	VETORES
+	1. Dados do VETOR A
+	2. Dados do VETOR B
+	3 Imprime VETORES
+	4. Soma VETORES
+	5. Subtrai VETORES
+        6. Multiplica VETORES
+        7. Divide VETORES
+	8. Sai do programa
+	OPÇÃO:
+
+
+97. Calcular o digito verificador do CPF 999.999.999-99 
+
+

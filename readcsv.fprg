@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Instrutor"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-27 01:16:26 "/>
+        <attribute name="created" value="SW5zdHJ1dG9yO0RFU0tUT1AtVUY2SjRORzsyMDI0LTAyLTI3OyIxMjoyOTowNSAiOzMyNDY="/>
+        <attribute name="edited" value="SW5zdHJ1dG9yO0RFU0tUT1AtVUY2SjRORzsyMDI0LTAyLTI3OyIwMToxNjoyNiAiOzE4OzM0MDc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="inputString, quote, subStr" type="String" array="False" size=""/>
+            <declare name="inQuote" type="Boolean" array="False" size=""/>
+            <declare name="lastStart, inputLength, i" type="Integer" array="False" size=""/>
+            <assign variable="inQuote" expression="false"/>
+            <assign variable="lastStart" expression="0"/>
+            <assign variable="inputString" expression="&quot;1, John,'Joy, John'&quot;"/>
+            <assign variable="quote" expression="&quot;'&quot;"/>
+            <assign variable="inputLength" expression="len(inputString)"/>
+            <output expression="inputLength" newline="True"/>
+            <for variable="i" start="0" end="inputLength-1" direction="inc" step="1">
+                <if expression="(i+1)==inputLength">
+                    <then>
+                        <output expression="&quot;Fim da inputString&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="char(inputString,i)==quote">
+                    <then>
+                        <if expression="inQuote">
+                            <then>
+                                <assign variable="inQuote" expression="false"/>
+                            </then>
+                            <else>
+                                <assign variable="inQuote" expression="true"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="char(inputString,i)==&quot;,&quot;">
+                    <then>
+                        <if expression="inQuote">
+                            <then/>
+                            <else>
+                                <assign variable="subStr" expression="substring(inputString,lastStart,i)"/>
+                                <output expression="subStr" newline="True"/>
+                                <assign variable="lastStart" expression="i+1"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+    <function name="substring" type="String" variable="subStr">
+        <parameters>
+            <parameter name="inputString" type="String" array="False"/>
+            <parameter name="lastStart" type="Integer" array="False"/>
+            <parameter name="i" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="subStr" type="String" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <assign variable="subStr" expression="&quot;&quot;"/>
+            <for variable="j" start="lastStart" end="i" direction="inc" step="1">
+                <output expression="char(inputString,j)" newline="True"/>
+                <assign variable="subStr" expression="subStr&amp;char(inputString,i)"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
